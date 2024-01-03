@@ -208,17 +208,18 @@ function makeRotatable(elementSelector) {
 
   // Function to handle the book rotation
   function rotate(e) {
-    state.calcDeg = (e.clientX - this.startX) / sensitivity;
+    const clientX = e.type === "touchmove" ? e.touches[0].clientX : e.clientX;
+    state.calcDeg = (clientX - this.startX) / sensitivity;
     book.style.transform = `rotateY(${state.calcDeg + state.prevDeg}deg)`;
     document.body.style.cursor = "grabbing";
   }
 
   // Function to start the rotation
   function startRotate(e) {
-    // Get initial mouse X position
-    this.startX = e.clientX;
-    // Bind the rotate function to mousemove event
-    section.addEventListener("mousemove", rotate);
+    // Get initial mouse/touch X position
+    this.startX = e.type === "touchstart" ? e.touches[0].clientX : e.clientX;
+    // Bind the rotate function to mousemove/touchmove event
+    section.addEventListener(e.type === "touchstart" ? "touchmove" : "mousemove", rotate);
   }
 
   // Function to stop the rotation
@@ -226,16 +227,20 @@ function makeRotatable(elementSelector) {
     // Save the last rotation
     state.prevDeg += state.calcDeg;
     section.removeEventListener("mousemove", rotate);
+    section.removeEventListener("touchmove", rotate);
     document.body.style.cursor = "default";
   }
 
-  // Attach mousedown event to the element to start rotation
+  // Attach mousedown/touchstart event to the element to start rotation
   section.addEventListener("mousedown", startRotate);
+  section.addEventListener("touchstart", startRotate);
 
-  // Attach mouseup event to the window to stop rotation
+  // Attach mouseup/touchend event to the window to stop rotation
   window.addEventListener("mouseup", stopRotate);
+  window.addEventListener("touchend", stopRotate);
 }
-// FUnction call for each book
+
+// Function call for each book
 makeRotatable(".bi-1");
 makeRotatable(".bi-2");
 makeRotatable(".bi-3");
