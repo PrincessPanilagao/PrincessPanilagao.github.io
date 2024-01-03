@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Title-->
+    <title>Ukiyo | Digital Library</title>
+
+    <!--Browser Icon-->
+    <link rel="icon" href="Images/browser-icon.png">
+
+    <!--Font Awesome CDN Link (Icons)-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--Swipper CDN Link-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+    <!--CSS Main File-->
+    <link rel="stylesheet" href="CSS/style.css">
+<body>
+    <div class="website-content">
+        <!--HEADER (Website Logo/Navbar/Featured Icons)-->
+        <header class="header">
+            <div class="main-header">
+                <!--Website Logo-->
+                <a href="" class="logo">ukiyo ✩˚</a>
+
+                <!--Navigation Bar-->
+                <nav class="menubar">
+                    <a href="#new-releases">New Releases</a>
+                    <a href="#previews">Preview</a>
+                    <a href="#events">Events</a>
+                    <a href="" class="starred">Starred</a>
+                    <a href="" class="library">Library</a>
+                </nav>
+
+                <!--Feautured Icons(library/starred/account)-->
+                <div class="menu-icons">
+                    <a href="" class="icon-1 fas fa-star"></a>
+                    <a href="" class="icon-2 fas fa-book"></a>
+                    <div id="login-btn" class="fas fa-user"></div>
+                    <!--Hamburger Menu Icon-->
+                    <div id="mobile-menu-icon" class="fas fa-bars" onclick="toggleMobileMenu()"></div>
+                </div>
+            </div>
+        </header>
+
+        <!--ACCOUNT LOGIN FORM-->
+        <div class="account-login-form">
+            <div id="close-login-btn" class="fas fa-times"></div>
+            <!--Form Details-->
+            <form action="">
+                <h3>Sign In</h3>
+
+                <!--Email/Phone & Password Entry Widgets-->
+                <span>Email or Phone</span>
+                <input type="email" class="box" placeholder="Enter your email">
+                <span>Password</span>
+                <input type="password" class="box" placeholder="Enter your password">
+
+                <!--Remember Me Checkbox-->
+                <div class="check-box">
+                    <input type="checkbox" id="remember-me">
+                    <label for="remember-me">Remember Me</label>
+                </div>
+
+                <!--Log In Button-->
+                <input type="submit" value="Log In" class="btn">
+                <!--Sign Up Option-->
+                <p>Dont't have an account ? <a href="">Sign Up</a></p>
+                <p></p>
+            </form>
+        </div>
+
+        <!--WEBSITE CONTENT - HEADER IMAGE-->
+        <section class="content-start">
+            <div class="row">
+                <!--Header Content-->
+                <div class="content-desc">
+                    <div class="leaf">
+                        <img src="Images/header/leaf.png" alt="Leaf">
+                    </div>
+                    <h3>Build Your Library</h3>
+                    <p>Keep the story going! A good book will keep you fascinated for days, a good library for your
+                        whole life.</p>
+                    <a href="" class="btn">Browse Now</a>
+                </div>
+
+                <!--Book Slider Display-->
+                <div class="swiper books-list">
+                    <div class="swiper-wrapper">
+                        <a href="" class="swiper-slide"><img src="Images/header/book-1.jpg" alt="Pride and Prejudice"></a>
+                        <a href="" class="swiper-slide"><img src="Images/header/book-2.jpg" alt="Howl's Moving Castle"></a>
+                        <a href="" class="swiper-slide"><img src="Images/header/book-3.jpg" alt="THG: Mockingjay"></a>
+                        <a href="" class="swiper-slide"><img src="Images/header/book-4.jpg" alt="The Poppy War"></a>
+                        <a href="" class="swiper-slide"><img src="Images/header/book-5.jpg" alt="The Adventures of Sherlock Holmes"></a>
+                        <a href="" class="swiper-slide"><img src="Images/header/book-6.jpg" alt="Wuthering Heights"></a>
+                    </div>
+
+                    <img class="stand" src="Images/header/stand.png" alt="Bookshelf Stand">
+                </div>
+            </div>
+        </section>
+
+        <!--Transition Section (NEW REALEASES)-->
+        <div id="threeD" class="threeD">
+            <h2>
+                <span>new releases</span>
+            </h2>
+            <!--skewdiv-->
+            <div class="skewsec">
+                <span>Discover the latest books including trending</span>
+            </div>
+            <div class="skewsec">
+                <span>new releases & best sellers in 2023</span>
+            </div>
+        </div>
+
+        <!--NEW RELEASES CONTENT-->
+        <section class="new-releases" id="new-releases">
+            <div class="new-releases-slider">
+                <div class="nr-container m-top">
+                    <!--Book Release #1-->
+                    <div id="book-showcase-yf" class="box">
+                        <!--Book Cover Image-->
+                        <div class="image">
+                            <img src="Images/new-releases/new-release-1.png" alt="Yellowface Cover">
+                        </div>
+                        <!--Book Details (Title/Author/Rating)-->
+                        <div class="content">
+                            <h3>Yellowface</h3>
+                            <div class="author">R.F. Kuang</span></div>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Book Release #2-->
+                    <div id="book-showcase-fw" class="box">
+                        <div class="image">
+                            <img src="Images/new-releases/new-release-2.png" alt="Fourth Wing Cover">
+                        </div>
+                        <div class="content">
+                            <h3>Fourth Wing <span>(The Empyrean #1)</span></h3>
+                            <div class="author">Rebecca Yarros</div>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Book Release #3-->
+                    <div id="book-showcase-sh" class="box">
+                        <div class="image">
+                            <img src="Images/new-releases/new-release-3.png" alt="The Stolen Heir Cover">
+                        </div>
+                        <div class="content">
+                            <h3>Stolen Heir</h3>
+                            <div class="author">Holly Black</div>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Book Release #4-->
+                    <div id="book-showcase-ikigai" class="box">
+                        <div class="image">
+                            <img src="Images/new-releases/new-release-4.png" alt="Ikigai Cover">
+                        </div>
+                        <div class="content">
+                            <h3>Ikigai</h3>
+                            <div class="author">Francesc Miralles & Hector Garcia</div>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Book Release #5-->
+                    <div id="book-showcase-lw" class="box">
+                        <div class="image">
+                            <img src="Images/new-releases/new-release-5.png" alt="Little Women Cover">
+                        </div>
+                        <div class="content">
+                            <h3>Little Women</h3>
+                            <div class="author">Louisa May Alcott</div>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Book Release #6-->
+                    <div id="book-showcase-soa" class="box">
+                        <div class="image">
+                            <img src="Images/new-releases/new-release-6.png" alt="The Song of Achilles Cover">
+                        </div>
+                        <div class="content">
+                            <h3>The Song of Achilles</h3>
+                            <div class="author">Madeline Miller</div>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--BOOK SHOWCASE-->
+        <!--Showcase #1: YellowFace-->
+        <div class="book-showcase bs-1">
+            <div class="close-showcase-btn csb-1 fas fa-times"></div>
+            <div class="left-side">
+                <div class="information-wrapper">
+                    <h3 class="info-genre">Fiction</h3>
+                    <h1 class="info-title t1">Yellowface</h1>
+                    <h2 class="info-author">R.F. Kuang</h2>
+
+                    <div class="info-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <span>3.86</span>
+                    </div>
+                    <div class="info-synopsis">With its totally immersive first-person voice, Yellowface grapples
+                        with questions of diversity, racism, and cultural appropriation, as well as the terrifying
+                        alienation of social media. R.F. Kuang’s novel is timely, razor-sharp, and eminently readable.
+                    </div>
+                    <div class="button-wrapper">
+                        <div class="swiper-button swiper-prev-button">
+                            <i class="fa-solid fa-download"></i>
+                        </div>
+                        <div class="swiper-button swiper-next-button">
+                            <i class="fa-solid fa-headphones"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="book3d-image">
+                <div class="blur blur1"></div>
+                <section class="showcase bi-1">
+                    <div class="showcase-container">
+                        <div class="book-parts">
+                            <div class=" front front-yf"></div>
+                            <div class="side side-yf"></div>
+                            <div class="back back-yf"></div>
+                            <div class="pages"></div>
+                            <div class="shadow"></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!--Showcase #2: Fourth Wing-->
+        <div class="book-showcase bs-2">
+            <div class="close-showcase-btn csb-2 fas fa-times"></div>
+            <div class="left-side">
+                <div class="information-wrapper">
+                    <h3 class="info-genre">Romantasy</h3>
+                    <h1 class="info-title t2">Fourth Wing</h1>
+                    <h2 class="info-author">Rebecca Yarros</h2>
+
+                    <div class="info-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>4.62</span>
+                    </div>
+                    <div class="info-synopsis">Twenty-year-old Violet Sorrengail was supposed to enter the Scribe
+                        Quadrant, living a quiet life among books and history. Now, the commanding general—also known as
+                        her tough-as-talons mother—has ordered Violet to join the hundreds of candidates striving to
+                        become the elite of Navarre: dragon riders.
+                    </div>
+                    <div class="button-wrapper">
+                        <div class="swiper-button swiper-prev-button">
+                            <i class="fa-solid fa-download"></i>
+                        </div>
+                        <div class="swiper-button swiper-next-button">
+                            <i class="fa-solid fa-headphones"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="book3d-image">
+                <div class="blur blur2"></div>
+                <section class="showcase bi-2">
+                    <div class="showcase-container">
+                        <div class="book-parts">
+                            <div class=" front front-fw"></div>
+                            <div class="side side-fw"></div>
+                            <div class="back back-fw"></div>
+                            <div class="pages"></div>
+                            <div class="shadow"></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!--Showcase #3: The Stolen Heir-->
+        <div class="book-showcase bs-3">
+            <div class="close-showcase-btn csb-3 fas fa-times"></div>
+            <div class="left-side">
+                <div class="information-wrapper">
+                    <h3 class="info-genre">Young Adult Fantasy</h3>
+                    <h1 class="info-title t3">The Stolen Heir</h1>
+                    <h2 class="info-author">Holly Black</h2>
+
+                    <div class="info-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <span>4.02</span>
+                    </div>
+                    <div class="info-synopsis">Now seventeen, Oak is charming, beautiful, and manipulative. He’s on a
+                        mission that will lead him into the north, and he wants Suren’s help. But if she agrees, it will
+                        mean guarding her heart against the boy she once knew and a prince she cannot trust, as well as
+                        confronting all the horrors she thought she left behind.
+                    </div>
+                    <div class="button-wrapper">
+                        <div class="swiper-button swiper-prev-button">
+                            <i class="fa-solid fa-download"></i>
+                        </div>
+                        <div class="swiper-button swiper-next-button">
+                            <i class="fa-solid fa-headphones"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="book3d-image">
+                <div class="blur blur3"></div>
+                <section class="showcase bi-3">
+                    <div class="showcase-container">
+                        <div class="book-parts">
+                            <div class=" front front-sh"></div>
+                            <div class="side side-sh"></div>
+                            <div class="back back-sh"></div>
+                            <div class="pages"></div>
+                            <div class="shadow"></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!--Showcase #4: Ikigai-->
+        <div class="book-showcase bs-4">
+            <div class="close-showcase-btn csb-4 fas fa-times"></div>
+            <div class="left-side">
+                <div class="information-wrapper">
+                    <h3 class="info-genre">Self-Help</h3>
+                    <h1 class="info-title t4">Ikigai</h1>
+                    <h2 class="info-author">Francesc Miralles & Hector Garcia</h2>
+
+                    <div class="info-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <span>4.02</span>
+                    </div>
+                    <div class="info-synopsis">Ikigai: The Japanese secret to a long and happy life<br>The people of
+                        Japan believe that everyone has an ikigai – a reason to jump out of bed each
+                        morning. And according to the residents of the Japanese island of Okinawa – the world’s
+                        longest-living people – finding it is the key to a longer and more fulfilled life.
+                    </div>
+                    <div class="button-wrapper">
+                        <div class="swiper-button swiper-prev-button">
+                            <i class="fa-solid fa-download"></i>
+                        </div>
+                        <div class="swiper-button swiper-next-button">
+                            <i class="fa-solid fa-headphones"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="book3d-image">
+                <div class="blur blur4"></div>
+                <section class="showcase bi-4">
+                    <div class="showcase-container">
+                        <div class="book-parts">
+                            <div class=" front front-ikigai"></div>
+                            <div class="side side-ikigai"></div>
+                            <div class="back back-ikigai"></div>
+                            <div class="pages"></div>
+                            <div class="shadow"></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!--Showcase #5: Little Women-->
+        <div class="book-showcase bs-5">
+            <div class="close-showcase-btn csb-5 fas fa-times"></div>
+            <div class="left-side">
+                <div class="information-wrapper">
+                    <h3 class="info-genre">Coming of Age</h3>
+                    <h1 class="info-title t5">Little Women</h1>
+                    <h2 class="info-author">Louisa May Alcott</h2>
+
+                    <div class="info-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>4.15</span>
+                    </div>
+                    <div class="info-synopsis">Generations of readers young and old, male and female, have fallen in
+                        love with the March sisters of Louisa May Alcott’s most popular and enduring novel, Little
+                        Women. Here are talented tomboy and author-to-be Jo, tragically frail Beth, beautiful Meg, and
+                        romantic, spoiled Amy, united in their devotion to each other and their struggles to survive in
+                        New England during the Civil War.
+                    </div>
+                    <div class="button-wrapper">
+                        <div class="swiper-button swiper-prev-button">
+                            <i class="fa-solid fa-download"></i>
+                        </div>
+                        <div class="swiper-button swiper-next-button">
+                            <i class="fa-solid fa-headphones"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="book3d-image">
+                <div class="blur blur5"></div>
+                <section class="showcase bi-5">
+                    <div class="showcase-container">
+                        <div class="book-parts">
+                            <div class=" front front-lw"></div>
+                            <div class="side side-lw"></div>
+                            <div class="back back-lw"></div>
+                            <div class="pages"></div>
+                            <div class="shadow"></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!--Showcase #6: The Song of Achilles-->
+        <div class="book-showcase bs-6">
+            <div class="close-showcase-btn csb-6 fas fa-times"></div>
+            <div class="left-side">
+                <div class="information-wrapper">
+                    <h3 class="info-genre">Historical Fiction</h3>
+                    <h1 class="info-title t6">The Song of Achilles</h1>
+                    <h2 class="info-author">Madeline Miller</h2>
+
+                    <div class="info-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>4.34</span>
+                    </div>
+                    <div class="info-synopsis">Achilles, "the best of all the Greeks," son of the cruel sea goddess
+                        Thetis and the legendary king Peleus, is strong, swift, and beautiful, irresistible to all who
+                        meet him. Patroclus is an awkward young prince, exiled from his homeland after an act of
+                        shocking violence. Brought together by chance, they forge an inseparable bond, despite risking
+                        the gods' wrath.
+                    </div>
+                    <div class="button-wrapper">
+                        <div class="swiper-button swiper-prev-button">
+                            <i class="fa-solid fa-download"></i>
+                        </div>
+                        <div class="swiper-button swiper-next-button">
+                            <i class="fa-solid fa-headphones"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="book3d-image">
+                <div class="blur blur6"></div>
+                <section class="showcase bi-6">
+                    <div class="showcase-container">
+                        <div class="book-parts">
+                            <div class=" front front-soa"></div>
+                            <div class="side side-soa"></div>
+                            <div class="back back-soa"></div>
+                            <div class="pages"></div>
+                            <div class="shadow"></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!--Famous Book Qoute #1-->
+        <div class="quote-container quote-one">
+            <h1 class="one-direction">“I am not afraid of storms, for I am learning how to sail my ship.” (Little Women)
+            </h1>
+            <h1 class="one-direction">“I am not afraid of storms, for I am learning how to sail my ship.” (Little Women)
+            </h1>
+        </div>
+
+        <!--PREVIEW-->
+        <section class="preview" id="previews">
+            <div class="content">
+                <div class="divider">
+                    <img src="Images/preview/leaf2.png" alt="Leaf Divider">
+                </div>
+                <h3>This Month's Favorite Pick</h3>
+                <h1>“The moment you doubt whether you can fly, you cease for ever to be able to do it.”</h1>
+                <p>― J. M. Barrie, Peter Pan</p>
+            </div>
+
+            <div class="image">
+                <img src="Images/preview/preview-cover.png" alt="Peter Pan and Wendy Book Preview">
+            </div>
+        </section>
+
+        <!--Famous Book Qoute #2-->
+        <div class="quote-container quote-one">
+            <h1 class="one-direction">“All the world is made of faith, and trust, and pixie dust.” (Peter Pan)</h1>
+            <h1 class="one-direction">“All the world is made of faith, and trust, and pixie dust.” (Peter Pan)</h1>
+        </div>
+
+        <!--Transition Section (EVENTS)-->
+        <div id="threeD1" class="threeD1">
+            <h2>
+                <span>upcoming events</span>
+            </h2>
+            <!--skewdiv-->
+            <div class="skewsec1">
+                <span>Get to know the authors behind your favorite books</span>
+            </div>
+            <div class="skewsec1">
+                <span>Exciting events & opportunities await!</span>
+            </div>
+        </div>
+
+        <!--UPCOMING EVENTS CONTENT-->
+        <section class="events" id="events">
+            <div class="swiper events-slider">
+                <div class="swiper-wrapper">
+                    <!--Event #1-->
+                    <div class="swiper-slide box">
+                        <div class="image">
+                            <img src="Images/events/event-1.png" alt="Event Cover 1">
+                        </div>
+                        <!--Event Details (Preview/Date)-->
+                        <div class="content">
+                            <h3>An Evening With Tom Hindle</h3>
+                            <p>
+                                The bestselling author of A Fatal Crossing returns with a closed community
+                                thriller - Murder on Lake Garda.
+                            </p>
+                            <div class="event-date">January 25, 2023 / 7:30PM GST</div>
+                        </div>
+                    </div>
+                    <!--Event #2-->
+                    <div class="swiper-slide box">
+                        <div class="image">
+                            <img src="Images/events/event-2.png" alt="Event Cover 2">
+                        </div>
+
+                        <div class="content">
+                            <h3>Midnight Launch Event ft. Holly Black</h3>
+                            <p>
+                                Books of Wonder hosts Holly Black for a late night book launch event. Tickets required.
+                            </p>
+                            <div class="event-date">March 4, 2024 / 10:30PM GST</div>
+                        </div>
+                    </div>
+                    <!--Event #3-->
+                    <div class="swiper-slide box">
+                        <div class="image">
+                            <img src="Images/events/event-3.jpg" alt="Event Cover 3">
+                        </div>
+
+                        <div class="content">
+                            <h3>Book Signing and Q&A with Holly Black</h3>
+                            <p>
+                                Don't miss your chance to meet one of our favourite authors - the brilliant Holly Black!
+                            </p>
+                            <div class="event-date">March 6, 2024 / 7:00PM GST</div>
+                        </div>
+                    </div>
+                    <!--Event #4-->
+                    <div class="swiper-slide box">
+                        <div class="image">
+                            <img src="Images/events/event-4.png" alt="Event Cover 4">
+                        </div>
+
+                        <div class="content">
+                            <h3>In Conversation with Chelsea Abdullah</h3>
+                            <p>
+                                In conversation with Chelsea Abdullah, YA author of The Stardust
+                                Thief.
+                            </p>
+                            <div class="event-date">January 16, 2024 / 6:00PM GST</div>
+                        </div>
+                    </div>
+                    <!--Event #5-->
+                    <div class="swiper-slide box">
+                        <div class="image">
+                            <img src="Images/events/event-5.png" alt="Event Cover 5">
+                        </div>
+
+                        <div class="content">
+                            <h3>Jasper Fforde - Red Side Story signing!</h3>
+                            <p>
+                                Feauturing Jasper's long awaited, assumed to never be a reality,
+                                Red Side Story.
+                            </p>
+                            <div class="event-date">February 9, 2024 / 12:00PM GST</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!--FOOTER-->
+        <footer class="footer">
+            <div class="footer-content">
+                <h3>ukiyo ✩˚</h3>
+                <p>Ukiyo is created solely for project purposes. All content, information, and functionalities are
+                    simulated and do not represent an actual online platform.</p>
+                <ul class="socials">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>Copyright &copy;2023 Designed by <span>Princess Jasmin S. Panilagao</span></p>
+            </div>
+        </footer>
+    </div>
+
+    <!--LOADING SCREEN-->
+    <div class="loading-screen">
+        <div class="loader">
+            <div class="loader-1 bar"></div>
+            <div class="loader-2 bar"></div>
+        </div>
+
+        <div class="counter">
+            <div class="counter-1 digit">
+                <div class="num">0</div>
+                <div class="num num1offset1">1</div>
+            </div>
+            <div class="counter-2 digit">
+                <div class="num">0</div>
+                <div class="num num1offset2">1</div>
+                <div class="num">2</div>
+                <div class="num">3</div>
+                <div class="num">4</div>
+                <div class="num">5</div>
+                <div class="num">6</div>
+                <div class="num">7</div>
+                <div class="num">8</div>
+                <div class="num">9</div>
+                <div class="num">0</div>
+            </div>
+            <div class="counter-3 digit">
+                <div class="num">0</div>
+                <div class="num">1</div>
+                <div class="num">2</div>
+                <div class="num">3</div>
+                <div class="num">4</div>
+                <div class="num">5</div>
+                <div class="num">6</div>
+                <div class="num">7</div>
+                <div class="num">8</div>
+                <div class="num">9</div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--JS FILES-->
+    <!--Swiper CDN Link-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!--GSAP CDN Link-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <!--Main Script File -->
+    <script src="script.js"></script>
+</body>
+</html>
